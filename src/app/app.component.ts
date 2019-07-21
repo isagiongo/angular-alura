@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'alurapic';
   description = 'Gato deitado';
-  url = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFfx3XvNkTuwrSjBmvBQUDbS4fqCDRdPALbgZ77mGW0IANd12R';
+  url = 'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80';
 }
