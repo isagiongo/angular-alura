@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -7,14 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  photos = [
-    {
-      url: 'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80',
-      description: 'Gato deitado'
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80',
-      description: 'Gato deitado'
-    }
-  ];
+  photos: Object[] = [];
+
+  constructor(http: HttpClient){
+    http.get<Object[]>('http://localhost:3000/flavio/photos')
+      .subscribe(photos => this.photos = photos
+      );
+  }
 }
